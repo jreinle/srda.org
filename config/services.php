@@ -35,4 +35,22 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'social' => [
+        'twitter' => [
+            'link' => '#',
+        ],
+        'facebook' => [
+            'link' => '#',
+        ],
+        'linkedin' => [
+            'link' => '#',
+        ],
+        'github' => [
+            'link' => '#',
+        ],
+        'instagram' => [
+            'link' => '#',
+        ],
+    ],
+
 ];
