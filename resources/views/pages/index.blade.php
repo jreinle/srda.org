@@ -44,7 +44,7 @@
                     <img src="{{ url('images/pic03.jpg') }}" alt=""/>
                 </span>
                 <header class="major">
-                    <h3><a href="{{ url('generic') }}" class="link">MISSION</a></h3>
+                    <h3><a href="{{ url('pages/default') }}" class="link">MISSION</a></h3>
                     <p>END HOMELESSNESS</p>
                 </header>
             </article>
