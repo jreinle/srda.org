@@ -1,5 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use App\Mail\ContactMessage;
+use Illuminate\Http\Request;
+
 /**
  * Created by Vextras.
  *
@@ -13,8 +16,14 @@ class ContactController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function postContactForm()
+    public function postContactForm(Request $request)
     {
+        try {
+            \Mail::to('ryan@vextras.com')->send(new ContactMessage($request->email, $request->name, $request->message));
+        } catch (\Exception $e) {
+            \Log::error("ContactControlle@post {$e->getMessage()}");
+        }
+
         return back();
     }
 }
