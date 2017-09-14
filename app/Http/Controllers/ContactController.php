@@ -19,7 +19,10 @@ class ContactController extends Controller
     public function postContactForm(Request $request)
     {
         try {
-            \Mail::to('ryan@vextras.com')->send(new ContactMessage($request->email, $request->name, $request->message));
+            if (!($mail_to = config('mail.contact'))) {
+                throw new \Exception('Invalid Contact Email!');
+            }
+            \Mail::to($mail_to)->send(new ContactMessage($request->email, $request->name, $request->message));
         } catch (\Exception $e) {
             \Log::error("ContactControlle@post {$e->getMessage()}");
         }

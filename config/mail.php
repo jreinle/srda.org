@@ -60,6 +60,8 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Skid Row Denim'),
     ],
 
+    'contact' => env('MAIL_CONTACT_FORM'),
+
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol
