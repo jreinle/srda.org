@@ -30,7 +30,7 @@
                         </header>
                         <p>SKID ROW DENIM & APPAREL INC. was founded with the belief that a future where humanity is connected to one another is more meaningful than one that is not.  We actively create products to make this possible with the ultimate goal of enabling dignity and purpose for all.</p>
                         <ul class="actions">
-                            <li><a href="{{ url('pages/default') }}" class="button">Learn more</a></li>
+                            <li><a href="{{ url('page/default') }}" class="button">Learn more</a></li>
                         </ul>
                     </div>
                 </div>
